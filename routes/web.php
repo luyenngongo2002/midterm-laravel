@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\T_restaurantController;
+use App\Models\T_restaurant;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('foods', T_restaurantController::class);
